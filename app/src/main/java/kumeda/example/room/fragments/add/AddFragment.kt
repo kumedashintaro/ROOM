@@ -13,8 +13,8 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
 import kumeda.example.room.R
-import kumeda.example.room.data.User
-import kumeda.example.room.data.UserViewModel
+import kumeda.example.room.model.User
+import kumeda.example.room.viewmodel.UserViewModel
 
 class AddFragment : Fragment() {
     //ViewModel
@@ -45,7 +45,12 @@ class AddFragment : Fragment() {
 
         if (inputCheck(firstName, lastName, age)) {
             // Create User Object
-            val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
+            val user = User(
+                0,
+                firstName,
+                lastName,
+                Integer.parseInt(age.toString())
+            )
             // Add Data to Database
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()

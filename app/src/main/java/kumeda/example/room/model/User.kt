@@ -1,8 +1,11 @@
-package kumeda.example.room.data
+package kumeda.example.room.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "user_table")
 class User (
     @PrimaryKey(autoGenerate = true)
@@ -10,4 +13,4 @@ class User (
     val firstName: String,
     val lastName: String,
     val age: Int
-)
+): Parcelable

@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_list.view.*
 import kumeda.example.room.R
-import kumeda.example.room.data.UserViewModel
+import kumeda.example.room.viewmodel.UserViewModel
 
 class ListFragment : Fragment() {
 

@@ -7,8 +7,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.custom_row.view.*
 import kumeda.example.room.R
-import kumeda.example.room.model.User
+
 import kotlinx.android.synthetic.main.custom_row.view.*
+import kumeda.example.room.model.User
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
